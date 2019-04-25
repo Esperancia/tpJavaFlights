@@ -1,0 +1,28 @@
+// Commande xml=>xsd=>java classes : 
+xjc -d ../ -p examenjava config.xsd
+xjc -d ../ -p examenjava configOutput.xsd
+
+// Données vol pour vérifier duplication
+12-02-2009|14-03-2010|COO|COO|12|Avio1|Equip1|100|500 ==>DEJA
+12-02-2009|14-03-2010|COO|COO|15|Avio1|Equip1|100|500 ==>DEJA
+12-02-2009|14-03-2010|COO|COO|20|Avio1|Equip1|100|500 ==>DEJA
+
+OUA|COO|2018-10-31|2018-11-01|100|14|500|Avio8|Equip1
+ABJ|ACC|2018-08-16|2019-08-15|100|16|400|Avio22|Equip1
+OUA|COO|2018-10-31|2018-11-01|100|14|500|Avio8|Equip1
+COO|ABJ|2018-08-16|2019-08-15|100|16|400|Avio22|Equip1
+OUA|ABJ|2018-10-31|2018-11-01|100|14|500|Avio8|Equip1
+COO|ACC|2018-08-16|2019-08-15|100|16|400|Avio22|Equip1
+
+- recuperer depuis xml les données concernées
+- scan avec lot en counter, 
+- traiter les fichiers avec nommage particulier (regex avc lambda et Pattern)
+- A chaque 3 secondes je rafraichis l’interface de la console (scan delay)
+- A chaque « frequence » (60s) je lance le scan pour enregistrer dans la bd
+- opencsv
+- Afficher dans la consolr dateTraitement, nbre de fichiers traités et nbre en cours de traitement
+- OneToOne à vérifier
+- Données et fichiers à prévoir
+
+
+

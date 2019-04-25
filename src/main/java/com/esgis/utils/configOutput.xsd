@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="traitements" type="traitements">
+    <xs:annotation>
+      <xs:documentation>To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="flux">
+    <xs:sequence>
+      <xs:element name="chemin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="/Applications/FichiersNonSynchro/master_irt/m2irt/Examens/examjava/data/ouest"/>
+            <xs:enumeration value="/Applications/FichiersNonSynchro/master_irt/m2irt/Examens/examJava/data/central"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nommage">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value=".*OUEST.*"/>
+            <xs:enumeration value="CENTRAL"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="frequence">
+        <xs:annotation>
+          <xs:documentation>expression régulières  expression régulières</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="60"/>
+            <xs:enumeration value="100"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="lot">
+        <xs:annotation>
+          <xs:documentation>seconds  seconds</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="traitements">
+    <xs:sequence>
+      <xs:element type="flux" name="flux" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>nombre de fichiers collectés par cycle  nombre de fichiers collectés par cycle</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

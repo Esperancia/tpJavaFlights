@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<traitements>
+    <flux>
+        <chemin>/Applications/FichiersNonSynchro/master_irt/m2irt/Examens/examjava/data/ouest</chemin>
+        <nommage>.*OUEST.*</nommage><!-- expression régulières -->
+        <frequence>60</frequence><!-- seconds -->
+        <lot>5</lot><!-- nombre de fichiers collectés par cycle -->
+    </flux>
+    <flux>
+        <chemin>/Applications/FichiersNonSynchro/master_irt/m2irt/Examens/examjava/data/central</chemin>
+        <nommage>.*CENTRAL.*</nommage><!-- expression régulières -->
+        <frequence>100</frequence><!-- seconds -->
+        <lot>5</lot><!-- nombre de fichiers collectés par cycle -->
+    </flux>
+</traitements>
